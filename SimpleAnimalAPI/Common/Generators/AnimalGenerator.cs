@@ -87,5 +87,15 @@ public class AnimalGenerator : IAnimalGenerator
             yield return preset;
         }
     }
-    public IEnumerable<Animal> GetAnimals() => throw new NotImplementedException();
+    public IEnumerable<Animal> GetAnimals(int count)
+    {
+        /* TODO: fix that if count is larger that presets length,
+         * less than count of animals will be returned,
+         * implement name assigning */
+        var presets = GetPresets().Take(count);
+        foreach (var preset in presets)
+        {
+            yield return Animal.CreateFromRequest(preset);
+        }
+    }
 }

@@ -8,5 +8,5 @@ public interface IAnimalGenerator
     
     public IEnumerable<string> GetNames();
     public IEnumerable<CreateAnimalDetailedRequest> GetPresets();
-    public IEnumerable<Animal> GetAnimals();
+    public IEnumerable<Animal> GetAnimals(int count);
 }
