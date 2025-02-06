@@ -3,7 +3,7 @@ using SimpleAnimalAPI.Modules.Animals.Contracts;
 
 public class AnimalService
 {
-    private static int idCounter = 0;
+    private int pageSize = 25;
 
     private List<Animal> Animals;
     
@@ -14,26 +14,18 @@ public class AnimalService
     
     public Animal Create(CreateAnimalRequest request)
     {
-        var animal = new Animal
-        {
-            Id = ++idCounter,
-            Name = request.Name,
-            Emoji = request.Emoji
-        };
-        return animal;
+        return Animal.CreateFromRequest(request);
     }
-    
-    public Animal Create(CreateAnimalDetailedRequest request)
+
+    public AnimalResponse? Get(int id, bool detailed=false)
     {
-        var animal = new Animal
+        var res = Animals.FirstOrDefault(a => a.Id == id);
+
+        if (res == null)
         {
-            Id = ++idCounter,
-            Name = request.Name,
-            Age = request.Age,
-            Species = request.Species,
-            Emoji = request.Emoji
-        };
-        return animal;
+            return null;
+        }
+        return detailed ? res.ToResponse() : res.ToDetailedResponse();
     }
     
     
