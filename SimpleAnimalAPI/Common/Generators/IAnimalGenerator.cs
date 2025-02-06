@@ -5,8 +5,10 @@ using SimpleAnimalAPI.Modules.Animals.Contracts;
 
 public interface IAnimalGenerator
 {
-    
-    public IEnumerable<string> GetNames();
-    public IEnumerable<CreateAnimalDetailedRequest> GetPresets();
-    public IEnumerable<Animal> GetAnimals(int count);
+    public string GetName();
+    public IEnumerable<string> GetNames(int count=-1);
+    public CreateAnimalDetailedRequest GetPreset();
+    public IEnumerable<CreateAnimalDetailedRequest> GetPresets(int count=-1);
+    public Animal GetAnimal(CreateAnimalDetailedRequest request);
+    public IEnumerable<Animal> GetAnimals(int count=-1);
 }
