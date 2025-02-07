@@ -2,14 +2,14 @@ namespace SimpleAnimalAPI.Modules.Animals;
 using SimpleAnimalAPI.Modules.Animals.Contracts;
 using SimpleAnimalAPI.Common.Generators;
 
-public class AnimalService
+public class AnimalsService
 {
 
     private readonly IAnimalGenerator _animalGenerator;
 
     private List<Animal> _animals;
     
-    public AnimalService(IAnimalGenerator animalGenerator)
+    public AnimalsService(IAnimalGenerator animalGenerator)
     {
         _animals = new List<Animal>();
         _animalGenerator = animalGenerator;
@@ -40,6 +40,10 @@ public class AnimalService
     public AnimalResponse[] GetList(int start = 0, int end = -1, bool detailed = false)
     {
         if (end == -1)
+            end = _animals.Count - 1;
+        if (start < 0)
+            start = 0;
+        if (end > _animals.Count)
             end = _animals.Count - 1;
         
         return _animals.Slice(start, end).Select(a => detailed ? a.ToResponse() : a.ToDetailedResponse()).ToArray();

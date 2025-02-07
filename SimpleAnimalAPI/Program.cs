@@ -1,4 +1,5 @@
 using SimpleAnimalAPI.Common.Generators;
+using SimpleAnimalAPI.Modules.Animals;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSingleton<IAnimalGenerator, RandomAnimalGenerator>();
+builder.Services.AddSingleton<AnimalsService>();
 
 builder.Services.Configure<RouteOptions>(options =>
 {
