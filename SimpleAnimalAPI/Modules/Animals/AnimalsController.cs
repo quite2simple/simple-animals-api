@@ -56,5 +56,16 @@ namespace SimpleAnimalAPI.Modules.Animals
                 return BadRequest("Invalid query parameters");
             }
         }
+
+        [HttpGet("{id:int}")]
+        public IActionResult GetAnimal([FromRoute] int id)
+        {
+            var animal = _animalsService.Get(id, true);
+            if (animal == null)
+            {
+                return NotFound("Animal not found");
+            }
+            return Ok(animal);
+        }
     }
 }
