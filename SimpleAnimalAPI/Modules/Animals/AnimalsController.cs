@@ -16,6 +16,7 @@ namespace SimpleAnimalAPI.Modules.Animals
             _animalsService = animalsService;
         }
 
+        [HttpGet]
         public IActionResult GetAnimals([FromQuery] GetAnimalsQuery query)
         {
             if (!ModelState.IsValid)
@@ -25,7 +26,7 @@ namespace SimpleAnimalAPI.Modules.Animals
 
             try
             {
-                var animals = _animalsService.GetList(query.Offset, query.Offset + query.Limit, query.Detailed);
+                var animals = _animalsService.GetList(query.Offset, query.Limit, query.Detailed);
                 var metadata = new PaginationMetadata()
                 {
                     Offset = query.Offset,
@@ -33,6 +34,7 @@ namespace SimpleAnimalAPI.Modules.Animals
                 };
                 var hasNext = query.Offset + query.Limit < metadata.TotalCount;
                 var hasPrevious = query.Offset > 0;
+                // TODO: Fix link calculations
                 var links = new PaginationLinks()
                 {
                     Current = "api/animals?offset=" + query.Offset + "&limit=" + query.Limit + "&detailed=" + query.Detailed,

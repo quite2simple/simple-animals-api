@@ -37,16 +37,16 @@ public class AnimalsService
         return detailed ? res.ToResponse() : res.ToDetailedResponse();
     }
 
-    public AnimalResponse[] GetList(int start = 0, int end = -1, bool detailed = false)
+    public AnimalResponse[] GetList(int start = 0, int limit = -1, bool detailed = false)
     {
-        if (end == -1)
-            end = _animals.Count - 1;
+        if (limit == -1)
+            limit = 1;
         if (start < 0)
             start = 0;
-        if (end > _animals.Count)
-            end = _animals.Count - 1;
+        if (start + limit > _animals.Count)
+            limit = _animals.Count - start;
         
-        return _animals.Slice(start, end).Select(a => detailed ? a.ToResponse() : a.ToDetailedResponse()).ToArray();
+        return _animals.Slice(start, limit).Select(a => detailed ? a.ToResponse() : a.ToDetailedResponse()).ToArray();
     }
         
 }
