@@ -1,0 +1,8 @@
+services:
+  webapp:
+    image: simple-animal-api
+    build:
+      context: .
+      dockerfile: SimpleAnimalAPI/Dockerfile
+    ports:
+      - "5000:8080"   # Map host port 5000 to container port 80 (HTTP)

@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.HttpOverrides;
 using SimpleAnimalAPI.Common.Generators;
 using SimpleAnimalAPI.Modules.Animals;
 
@@ -18,6 +19,12 @@ builder.Services.Configure<RouteOptions>(options =>
     options.LowercaseUrls = true;
 });
 
+builder.Services.Configure<ForwardedHeadersOptions>(options =>
+{
+    options.ForwardedHeaders =
+        ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto;
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,10 +34,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
+app.UseForwardedHeaders();
 app.MapControllers();
 
 app.Run();

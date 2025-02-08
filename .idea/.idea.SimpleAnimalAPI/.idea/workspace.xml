@@ -8,17 +8,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f99a39-1ca3-4130-a51b-3c7cbf152807" name="Changes" comment="Add RandomAnimalGenerator as a service, injected it into AnimalService, added populating and returning a list to AnimalService">
-      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Modules/Animals/AnimalService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Modules/Animals/AnimalsService.cs" afterDir="false" />
+    <list default="true" id="79f99a39-1ca3-4130-a51b-3c7cbf152807" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAnimalAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAnimalAPI/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Properties/launchSettings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;quite2simple&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/quite2simple/simple-animals-api.git&quot;,
+    &quot;accountId&quot;: &quot;398264e1-7c30-47f3-a9c0-61a8d6770e6a&quot;
+  }
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://C:/Projects/small stuff/SimpleAnimalAPI/SimpleAnimalAPI/Common/Generators/AnimalGenerator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Projects/small stuff/SimpleAnimalAPI/SimpleAnimalAPI/Common/Generators/IAnimalGenerator.cs" root0="SKIP_HIGHLIGHTING" />
@@ -38,18 +56,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.SimpleAnimalAPI: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Launch Settings Profile.SimpleAnimalAPI: https.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;SolutionBuilderGeneralOptionsPage&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PLAIN_TEXT&quot;
+    ]
   }
 }</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.SimpleAnimalAPI: http">
@@ -123,7 +148,8 @@
       <workItem from="1738602462136" duration="1320000" />
       <workItem from="1738689435730" duration="3185000" />
       <workItem from="1738734887453" duration="10518000" />
-      <workItem from="1738826476801" duration="7677000" />
+      <workItem from="1738826476801" duration="16556000" />
+      <workItem from="1739036249086" duration="2841000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -173,7 +199,39 @@
       <option name="project" value="LOCAL" />
       <updated>1738907427789</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Created AnimalsController, worked on pagination, more DI">
+      <option name="closed" value="true" />
+      <created>1738910106353</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1738910106353</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added swagger, tested the endpoint, some things need fixing">
+      <option name="closed" value="true" />
+      <created>1738911097347</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1738911097347</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added README">
+      <option name="closed" value="true" />
+      <created>1738911269176</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738911269176</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added getting by id endpoint, fixed detailed order in ternary">
+      <option name="closed" value="true" />
+      <created>1738923952283</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738923952283</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +258,10 @@
     <MESSAGE value="Implemented GetAnimals method" />
     <MESSAGE value="Refactored animal generators, added randomness and infinite generation" />
     <MESSAGE value="Add RandomAnimalGenerator as a service, injected it into AnimalService, added populating and returning a list to AnimalService" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add RandomAnimalGenerator as a service, injected it into AnimalService, added populating and returning a list to AnimalService" />
+    <MESSAGE value="Created AnimalsController, worked on pagination, more DI" />
+    <MESSAGE value="Added swagger, tested the endpoint, some things need fixing" />
+    <MESSAGE value="Added README" />
+    <MESSAGE value="Added getting by id endpoint, fixed detailed order in ternary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getting by id endpoint, fixed detailed order in ternary" />
   </component>
 </project>
