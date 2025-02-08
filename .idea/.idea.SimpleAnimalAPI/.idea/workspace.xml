@@ -8,11 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79f99a39-1ca3-4130-a51b-3c7cbf152807" name="Changes" comment="">
+    <list default="true" id="79f99a39-1ca3-4130-a51b-3c7cbf152807" name="Changes" comment="The container seems to work!">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SimpleAnimalAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SimpleAnimalAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimpleAnimalAPI/SimpleAnimalAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SimpleAnimalAPI/SimpleAnimalAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +148,7 @@
       <workItem from="1738689435730" duration="3185000" />
       <workItem from="1738734887453" duration="10518000" />
       <workItem from="1738826476801" duration="16556000" />
-      <workItem from="1739036249086" duration="2841000" />
+      <workItem from="1739036249086" duration="3502000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -231,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738923952283</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="The container seems to work!">
+      <option name="closed" value="true" />
+      <created>1739039332692</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1739039332693</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +269,7 @@
     <MESSAGE value="Added swagger, tested the endpoint, some things need fixing" />
     <MESSAGE value="Added README" />
     <MESSAGE value="Added getting by id endpoint, fixed detailed order in ternary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getting by id endpoint, fixed detailed order in ternary" />
+    <MESSAGE value="The container seems to work!" />
+    <option name="LAST_COMMIT_MESSAGE" value="The container seems to work!" />
   </component>
 </project>

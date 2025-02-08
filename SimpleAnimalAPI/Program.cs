@@ -1,13 +1,17 @@
 using Microsoft.AspNetCore.HttpOverrides;
 using SimpleAnimalAPI.Common.Generators;
 using SimpleAnimalAPI.Modules.Animals;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console().CreateLogger();
 
 // Add services to the container.
 
 builder.Services.AddControllers();
-
+builder.Services.AddSerilog();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
